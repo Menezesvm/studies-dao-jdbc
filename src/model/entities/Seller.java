@@ -11,7 +11,7 @@ public class Seller implements Serializable {
 	private Integer id;
 	private String name;
 	private String email;
-	private Date birhtDate;
+	private Date birthDate;
 	private Double BaseSalary;
 
 	private Department department;
@@ -19,12 +19,12 @@ public class Seller implements Serializable {
 	public Seller() {
 	}
 
-	public Seller(Integer id, String name, String email, Date birhtDate,
-				  Double baseSalary, Department department) {
+	public Seller(Integer id, String name, String email, Date birthDate,
+	              Double baseSalary, Department department) {
 		this.id = id;
 		this.name = name;
 		this.email = email;
-		this.birhtDate = birhtDate;
+		this.birthDate = birthDate;
 		BaseSalary = baseSalary;
 		this.department = department;
 	}
@@ -53,12 +53,12 @@ public class Seller implements Serializable {
 		this.email = email;
 	}
 
-	public Date getBirhtDate() {
-		return birhtDate;
+	public Date getBirthDate() {
+		return birthDate;
 	}
 
-	public void setBirhtDate(Date birhtDate) {
-		this.birhtDate = birhtDate;
+	public void setBirthDate(Date birhtDate) {
+		this.birthDate = birhtDate;
 	}
 
 	public Double getBaseSalary() {
@@ -82,7 +82,7 @@ public class Seller implements Serializable {
 		if (o == null || getClass() != o.getClass()) return false;
 
 		Seller seller = (Seller) o;
-		return Objects.equals(id, seller.id) && Objects.equals(name, seller.name) && Objects.equals(email, seller.email) && Objects.equals(birhtDate, seller.birhtDate) && Objects.equals(BaseSalary, seller.BaseSalary) && Objects.equals(department, seller.department);
+		return Objects.equals(id, seller.id) && Objects.equals(name, seller.name) && Objects.equals(email, seller.email) && Objects.equals(birthDate, seller.birthDate) && Objects.equals(BaseSalary, seller.BaseSalary) && Objects.equals(department, seller.department);
 	}
 
 	@Override
@@ -90,7 +90,7 @@ public class Seller implements Serializable {
 		int result = Objects.hashCode(id);
 		result = 31 * result + Objects.hashCode(name);
 		result = 31 * result + Objects.hashCode(email);
-		result = 31 * result + Objects.hashCode(birhtDate);
+		result = 31 * result + Objects.hashCode(birthDate);
 		result = 31 * result + Objects.hashCode(BaseSalary);
 		result = 31 * result + Objects.hashCode(department);
 		return result;
@@ -102,7 +102,7 @@ public class Seller implements Serializable {
 				"id=" + id +
 				", name='" + name + '\'' +
 				", email='" + email + '\'' +
-				", birhtDate=" + birhtDate +
+				", birhtDate=" + birthDate +
 				", BaseSalary=" + BaseSalary +
 				", department=" + department +
 				'}';
